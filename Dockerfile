@@ -10,6 +10,7 @@ RUN git clone https://github.com/Jacekun/AniPy.git
 WORKDIR /app/AniPy
 
 COPY docker-entrypoint.sh /app/docker-entrypoint.sh
+COPY trim_list.py /app/AniPy/func/trim_list.py
 
 RUN chmod +x /app/docker-entrypoint.sh
 
