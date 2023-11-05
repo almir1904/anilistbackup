@@ -16,7 +16,6 @@ RUN chmod +x /app/docker-entrypoint.sh
 
 RUN pip install -r requirements.txt
 
-ENV MAL=
 ENV TACHI=false
 ENV TRIM_LISTS=false
 ENV SEPARATE_NSFW=false
