@@ -4,6 +4,12 @@ services:
   anilistbackup:
     image: ghcr.io/almir1904/anilistbackup:latest
     environment:
-      - ANI=USERNAME
+      - ANI=your_anilist_user
+      - MAL=your_mal_user #OPTIONAL
+      #- TACHI=false #OPTIONAL
+      #- TRIM_LISTS=true #OPTIONAL
+      #- SEPARATE_NSFW=false #OPTIONAL
+      #- CLEAR_OUTPUT_FILES=false #OPTIONAL
+      #- USE_ANILIST_AS_MAL=false #OPTIONAL
     volumes:
-      - hostpath:/app/AniPy/output
+      - /path/to/host/output/directory:/app/AniPy/output
