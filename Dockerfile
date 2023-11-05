@@ -15,7 +15,6 @@ COPY trim_list.py /app/AniPy/func/trim_list.py
 RUN chmod +x /app/docker-entrypoint.sh
 
 RUN pip install -r requirements.txt
-RUN sed -i 's/averageScore = "{:.2f}".format(statScoreTotal\/statScoreCount \* 10)/if statScoreCount == 0:\n    averageScore = "N\/A"\nelse:\n    averageScore = "{:.2f}".format(statScoreTotal\/statScoreCount \* 10)/' /app/AniPy/func/trim_list.py 
 
 ENV MAL=
 ENV TACHI=false
