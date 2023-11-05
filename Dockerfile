@@ -11,4 +11,4 @@ WORKDIR /app/AniPy
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "anipy.py", "-user", "${ANIUser}", "-mal", "${MALUser}", "--t"]
+CMD ["python", "anipy.py", "-user", "${ANIUser}", "-mal", "${MALUser}"]
