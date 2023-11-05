@@ -22,7 +22,6 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-           almir1904/docker-qbittorrent-enhanced
            ghcr.io/${{ github.repository }}
           
       
