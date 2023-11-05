@@ -15,10 +15,8 @@ RUN chmod +x /app/docker-entrypoint.sh
 
 RUN pip install -r requirements.txt
 
-ENV ANI=
 ENV MAL=
-ENV TACHI=/app/AniPy/output/tachiyomi-backup.xml
-ENV AUTHENTICATE=false
+ENV TACHI=false
 ENV TRIM_LISTS=false
 ENV SEPARATE_NSFW=false
 ENV CLEAR_OUTPUT_FILES=false
