@@ -22,13 +22,13 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-           ghcr.io/almir1904/anilistbackup:latest
+           ghcr.io/${{ github.repository }}
           
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
         with:
-          platforms: linux/amd64
+          platforms: linux/amd64, linux/arm64
 
       - name: Set up Docker Buildx
         id: buildx
@@ -39,7 +39,7 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          platforms: linux/amd64
+          platforms: linux/amd64, linux/arm64
           tags: |
             ghcr.io/almir1904/anilistbackup:latest
           labels: ${{ steps.meta.outputs.labels }}
